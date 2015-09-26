@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
         
         if @recipe.save
           flash[:success] = "Your recipe was created succesfully!"
-          redirect_to recipes_path
+          redirect_to chef_path(@chef)
         else 
             render :new
         end
